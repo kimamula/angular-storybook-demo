@@ -1,0 +1,10 @@
+@import "../../../assets/variables";
+
+td, th {
+  padding: .75rem;
+  vertical-align: top;
+  border-top: 1px solid $gray-boundary;
+}
+th {
+  text-align: inherit;
+}

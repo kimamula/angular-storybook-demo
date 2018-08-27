@@ -1,3 +1,4 @@
+import { ExampleTableRowComponent } from "../src/app/directives/example-table-row/example-table-row.component";
 import { ExampleTableComponent } from "../src/app/directives/example-table/example-table.component";
 import { addDecorator, configure, moduleMetadata } from '@storybook/angular';
 import { ScriptHelperComponent } from '../src/stories/helpers/script-helper.component'; // automatically import all files ending in *.stories.ts
@@ -9,6 +10,6 @@ function loadStories() {
 }
 
 addDecorator(moduleMetadata({
-  declarations: [ScriptHelperComponent, ExampleTableComponent]
+  declarations: [ScriptHelperComponent, ExampleTableComponent, ExampleTableRowComponent]
 }));
 configure(loadStories, module);

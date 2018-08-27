@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ExampleTableComponent } from './directives/example-table/example-table.component';
+import { ExampleTableRowComponent } from './directives/example-table-row/example-table-row.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ExampleTableComponent
+    ExampleTableComponent,
+    ExampleTableRowComponent
   ],
   imports: [
     BrowserModule

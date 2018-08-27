@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { User } from '../../model/User';
 
 @Component({
   selector: 'app-example-table',
@@ -6,14 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./example-table.component.scss']
 })
 export class ExampleTableComponent implements OnInit {
-
-  script = `
-$('.table tr:not(.disabled)').on('click', ({ currentTarget }) => alert('Hi from ' + currentTarget.children[1].textContent));
-`;
+  @Input() users: User[];
+  @Input() disabledUserIds: number[] = [];
+  @ViewChild('content') content: TemplateRef<any>;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  trackByFn(index: number, { id }: User) {
+    return id;
+  }
+
+  onClick(user: User) {
+    alert(`Hi from ${user.firstName}`);
   }
 
 }

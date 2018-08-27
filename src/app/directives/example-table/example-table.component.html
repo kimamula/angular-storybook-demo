@@ -8,25 +8,8 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr class="disabled">
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
+    <tr appExampleTableRow *ngFor="let user of users; let i = index; trackBy: trackByFn" [user]="user"
+        [class.disabled]="disabledUserIds.indexOf(user.id) >= 0" [rowIndex]="i"
+        (click)="$event.currentTarget.classList.contains('disabled') || onClick(user)"></tr>
   </tbody>
-  <!-- script-helper script="console.log('短い script は直接書くのが便利でしょう')"></script-helper -->
-  <script-helper [script]="script"></script-helper>
 </table>
