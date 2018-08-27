@@ -1,0 +1,43 @@
+@import "../../../assets/variables";
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  .thead-dark {
+    th {
+      color: #fff;
+      background-color: #212529;
+      border-color: #32383e;
+    }
+  }
+  .thead-light {
+    th {
+      color: #495057;
+      background-color: #e9ecef;
+      border-color: $gray-boundary;
+    }
+  }
+  thead {
+    th {
+      vertical-align: bottom;
+      border-bottom: 2px solid $gray-boundary;
+    }
+  }
+  td, th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid $gray-boundary;
+  }
+  tr.disabled {
+    text-decoration: line-through;
+  }
+}
+
+table {
+  border-collapse: collapse;
+}
+th {
+  text-align: inherit;
+}

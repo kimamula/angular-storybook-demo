@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExampleTableComponent implements OnInit {
 
+  script = `
+$('.table tr:not(.disabled)').on('click', ({ currentTarget }) => alert('Hi from ' + currentTarget.children[1].textContent));
+`;
+
   constructor() { }
 
   ngOnInit() {
