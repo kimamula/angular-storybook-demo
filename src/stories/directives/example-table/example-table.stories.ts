@@ -4,12 +4,5 @@ import { ExampleTableComponent } from '../../../app/directives/example-table/exa
 
 storiesOf('app-example-table', module)
   .add('default', () => ({
-    component: ExampleTableComponent,
-    props: {},
-    moduleMetadata: {
-      imports: [],
-      schemas: [],
-      declarations: [],
-      providers: []
-    }
+    component: ExampleTableComponent
   }));
