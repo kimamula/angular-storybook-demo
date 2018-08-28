@@ -1,8 +1,15 @@
 # AngularStorybookDemo
 
-このレポジトリは、 Angular を使った Web アプリケーションにおけるデザイナーとエンジニアの協業のワークフローを提案するものです。
+このリポジトリは、 Angular を使った Web アプリケーションにおけるデザイナーとエンジニアの協業のワークフローを提案するものです。
 
 [ngx-schematics-for-storybook](https://github.com/kimamula/ngx-schematics-for-storybook) を使うことで、デザイナーの作業が簡単になるよう工夫しています。
+
+## 前提
+
+- デザイナーとエンジニアで共通のリポジトリを使う
+    - コードの乖離を避けるため、デザインは single source of truth
+    - git submodule や git subtree を使って、共有範囲をデザイン部分だけに限定する工夫はありうる
+    - または、デザイン以外も含むコード全体を共有して、オリジナルのリポジトリに対してはデザイナーさんには read 権限だけ与え、それを fork して作業してもらう
 
 ## ワークフロー
 
